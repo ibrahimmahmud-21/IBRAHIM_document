@@ -6,9 +6,9 @@
   <style>
     body {
       font-family: Arial;
-      background-color: #f2f2f2;
+      background-color: #f0f0f0;
       text-align: center;
-      padding: 50px;
+      padding: 40px;
     }
     #lock {
       display: block;
@@ -16,21 +16,31 @@
     #content {
       display: none;
     }
+    input {
+      padding: 10px;
+      font-size: 16px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-top: 10px;
+    }
   </style>
 </head>
 <body>
   <div id="lock">
-    <h2>🔐 গোপন ডকুমেন্ট</h2>
-    <p>দয়া করে পাসওয়ার্ড দিন:</p>
-    <input type="password" id="passwordInput">
-    <button onclick="checkPassword()">দেখাও</button>
+    <h2>🔐 এই পেজটি পাসওয়ার্ড দিয়ে সুরক্ষিত</h2>
+    <p>পাসওয়ার্ড লিখুন:</p>
+    <input type="password" id="passwordInput" placeholder="পাসওয়ার্ড দিন">
+    <br>
+    <button onclick="checkPassword()">প্রবেশ করুন</button>
     <p id="error" style="color:red;"></p>
   </div>
 
   <div id="content">
-    <h3>✅ পাসওয়ার্ড ঠিক। নিচে ফাইল দেখানো হচ্ছে:</h3>
-    <h4>📁 IBRAHIM এর ফাইল:</h4>
-    <iframe src="https://drive.google.com/embeddedfolderview?id=1200ik4IOnggEJsdMBECNa0mGx4GP4hJD#grid" style="width:100%; height:600px; border:0;"></iframe>
+    <h2>📁 IBRAHIM এর ডকুমেন্ট ফোল্ডার</h2>
+    <iframe src="https://drive.google.com/embeddedfolderview?id=1200ik4IOnggEJsdMBECNa0mGx4GP4hJD#grid"
+            style="width:100%; height:600px; border:0;"></iframe>
   </div>
 
   <script>
