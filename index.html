@@ -1,58 +1,31 @@
+
 <!DOCTYPE html>
 <html>
 <head>
-  <title>IBRAHIM এর ডকুমেন্ট</title>
-  <meta charset="UTF-8">
-  <style>
-    body {
-      font-family: Arial;
-      background-color: #f0f0f0;
-      text-align: center;
-      padding: 40px;
-    }
-    #lock {
-      display: block;
-    }
-    #content {
-      display: none;
-    }
-    input {
-      padding: 10px;
-      font-size: 16px;
-    }
-    button {
-      padding: 10px 20px;
-      font-size: 16px;
-      margin-top: 10px;
-    }
-  </style>
-</head>
-<body>
-  <div id="lock">
-    <h2>🔐 এই পেজটি পাসওয়ার্ড দিয়ে সুরক্ষিত</h2>
-    <p>পাসওয়ার্ড লিখুন:</p>
-    <input type="password" id="passwordInput" placeholder="পাসওয়ার্ড দিন">
-    <br>
-    <button onclick="checkPassword()">প্রবেশ করুন</button>
-    <p id="error" style="color:red;"></p>
-  </div>
-
-  <div id="content">
-    <h2>📁 IBRAHIM এর ডকুমেন্ট ফোল্ডার</h2>
-    <iframe src="https://drive.google.com/embeddedfolderview?id=1200ik4IOnggEJsdMBECNa0mGx4GP4hJD#grid"
-            style="width:100%; height:600px; border:0;"></iframe>
-  </div>
-
+  <title>My Protected PDF</title>
   <script>
     function checkPassword() {
-      const password = document.getElementById("passwordInput").value;
+      var password = document.getElementById("password").value;
       if (password === "ibrahimmahmud21") {
-        document.getElementById("lock").style.display = "none";
-        document.getElementById("content").style.display = "block";
+        document.getElementById("pdfFrame").style.display = "block";
+        document.getElementById("passwordBox").style.display = "none";
       } else {
-        document.getElementById("error").innerText = "❌ ভুল পাসওয়ার্ড!";
+        alert("ভুল পাসওয়ার্ড! আবার চেষ্টা করুন।");
       }
     }
   </script>
+</head>
+<body style="font-family: sans-serif; text-align: center; padding-top: 50px;">
+
+  <div id="passwordBox">
+    <h2>⚠️ পিডিএফ দেখার জন্য পাসওয়ার্ড দিন</h2>
+    <input type="password" id="password" placeholder="পাসওয়ার্ড দিন">
+    <button onclick="checkPassword()">সাবমিট</button>
+  </div>
+
+  <div id="pdfFrame" style="display:none; margin-top: 20px;">
+    <iframe src="https://drive.google.com/file/d/1p9ziP5aFIWDjbRB3fmq5O69JelZcFSy1/preview" width="100%" height="600"></iframe>
+  </div>
+
 </body>
 </html>
