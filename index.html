@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IBRAHIM.documents file</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    .container {
+      margin-top: 100px;
+    }
+    .hidden {
+      display: none;
+    }
+    input[type="password"] {
+      padding: 10px;
+      font-size: 16px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      margin-left: 10px;
+    }
+    .docs {
+      margin-top: 30px;
+    }
+    iframe {
+      width: 90%;
+      height: 500px;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to IBRAHIM.documents file</h1>
+    <p>Enter password to view documents:</p>
+    <input type="password" id="password" placeholder="Enter password">
+    <button onclick="checkPassword()">Submit</button>
+
+    <div class="docs hidden" id="docs">
+      <h2>Your Documents</h2>
+      <p>Below is a sample document. You can replace this with your own Google Drive embedded file/link.</p>
+      <!-- নিচের লিংকটায় আপনার Google Drive preview লিংক বসাবেন -->
+      <iframe src="https://drive.google.com/file/d/your-file-id/preview" allow="autoplay"></iframe>
+    </div>
+  </div>
+
+  <script>
+    function checkPassword() {
+      const input = document.getElementById('password').value;
+      const correctPassword = 'ibrahi101movic';
+      if (input === correctPassword) {
+        document.getElementById('docs').classList.remove('hidden');
+      } else {
+        alert('Incorrect password!');
+      }
+    }
+  </script>
+</body>
+</html>
