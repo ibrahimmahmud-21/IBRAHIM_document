@@ -3,74 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>পাসওয়ার্ড সুরক্ষিত প্রোফাইল পেজ</title>
-    
+    <title>প্রজেক্ট ফোল্ডার তালিকা</title>
     <style>
+        /* এখানে কিছু সাধারণ ডিজাইন যোগ করা হলো যাতে দেখতে ভালো লাগে */
         body {
             font-family: Arial, sans-serif;
-            padding: 20px;
-            text-align: center;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
         }
-        #protectedContent {
-            /* কন্টেন্টটি প্রাথমিকভাবে লুকিয়ে রাখা হলো */
-            display: none; 
-            border: 2px solid #4CAF50;
-            padding: 20px;
-            margin-top: 20px;
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 30px;
             border-radius: 8px;
-            background-color: #f9fff9;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        #passwordInput {
-            padding: 10px;
-            margin-right: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
+        h1, h2 {
+            color: #0056b3;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
         }
-        button {
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            background: #e9e9e9;
+            margin-bottom: 10px;
             padding: 10px 15px;
-            background-color: #007bff;
-            color: white;
-            border: none;
             border-radius: 4px;
-            cursor: pointer;
         }
-        button:hover {
-            background-color: #0056b3;
-        }
-        #message {
-            margin-top: 10px;
+        a {
+            text-decoration: none;
+            color: #007bff;
             font-weight: bold;
         }
-        .profile-img {
-            max-width: 150px;
-            height: auto;
-            border-radius: 50%; /* ছবিটিকে গোলাকার করার জন্য */
-            margin-bottom: 15px;
+        a:hover {
+            text-decoration: underline;
+        }
+        .note {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #fff3cd;
+            border-left: 5px solid #ffc107;
+            color: #856404;
         }
     </style>
 </head>
 <body>
+    <div class="container">
+        <h1>আমার প্রজেক্ট রিসোর্স ফোল্ডার</h1>
 
-    <h1>আমার প্রোফাইল অ্যাক্সেস</h1>
+        <h2>ফোল্ডারের তথ্য</h2>
+        <p>প্রধান চিত্রাবলীর ফোল্ডারটির নাম: <strong>assets/project_images/</strong></p>
 
-    <input type="password" id="passwordInput" placeholder="পাসওয়ার্ড দিন">
-    <button onclick="checkPassword()">প্রবেশ করুন</button>
-    
-    <p id="message"></p>
-    
-    <div id="protectedContent">
-        <h2>গোপন প্রোফাইল কন্টেন্ট</h2>
-        
-        <img src="profile.jpg" alt="আমার প্রোফাইল ছবি" class="profile-img">
-        
-        <p>অভিনন্দন! আপনি সঠিক পাসওয়ার্ড দিয়ে প্রবেশ করেছেন।</p>
-        <p>এই অংশটিতে আপনি আপনার অন্যান্য গুরুত্বপূর্ণ তথ্য বা লিঙ্ক যোগ করতে পারেন।</p>
-    </div>
-
-    <script>
-        function checkPassword() {
-            // ১. আপনার পছন্দসই সঠিক পাসওয়ার্ড এখানে সেট করুন
-            // **এই "আমারপাসওয়ার্ড" লেখাটি পাল্টে আপনার আসল পাসওয়ার্ডটি দিন**
-            const correctPassword = "আমারপাসওয়ার্ড"; 
-
-            // ২. ইনপ
+        <h2>উপলব্ধ ফাইলের তালিকা</h2>
+        <ul>
+            <li><a href="assets/project_images/sunrise.jpg">sunrise.jpg (সূর্যোদয়ের ছবি)</a></li>
+            <li><a href="assets/project_images/document-v1.pdf">document-v1.pdf (রিপোর্ট ফাইল)</a></li>
+            <li><a href="assets/project_images/logo.png">logo.png (লোগো ফাইল)</a></li>
+            <li><a href="assets/data/configuration.json">configuration.json (সেটিংস ফাইল)</a></li>
+        </ul>
