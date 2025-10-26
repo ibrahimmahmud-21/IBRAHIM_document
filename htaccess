@@ -1,0 +1,6 @@
+<Files "protected_files.html">
+    AuthType Basic
+    AuthName "Restricted Files Login"
+    AuthUserFile ./.htpasswd
+    Require valid-user
+</Files>
