@@ -85,10 +85,9 @@ body {
 .profile-picture {
     width: 250px; 
     height: 250px; 
-    border-radius: 50%; /* ছবিটিকে গোল করা হলো */
+    border-radius: 50%; 
     object-fit: cover; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    /* নিশ্চিত করার জন্য */
     flex-shrink: 0;
 }
 
@@ -122,7 +121,7 @@ body {
 /* ছোট পর্দার জন্য পরিবর্তন (Media Query for smaller screens) */
 @media (max-width: 768px) {
     .about-container {
-        flex-direction: column; /* ছোট স্ক্রিনে ছবি ও লেখা উপরে-নিচে থাকবে */
+        flex-direction: column; 
         text-align: center;
     }
     
