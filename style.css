@@ -1,0 +1,134 @@
+/* সাধারণ স্টাইল (General/Reset Styles) */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.content-section {
+    padding: 60px 20px;
+    background-color: #ffffff;
+    margin-top: 0; 
+}
+
+
+/* নেভিগেশন বারের স্টাইল (Navigation Bar Styles) */
+
+.navbar {
+    background-color: #333; 
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    text-decoration: none; 
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #007bff;
+}
+
+/* 'আমার সম্বন্ধীয়' বিভাগের স্টাইল (Styles for "About Me" Section) */
+
+#about-me {
+    text-align: center;
+}
+
+#about-me h2 {
+    margin-bottom: 30px; 
+    color: #333; 
+}
+
+.about-container {
+    display: flex; 
+    align-items: center; 
+    max-width: 1000px; 
+    margin: 0 auto;
+    gap: 40px; 
+    text-align: left; 
+}
+
+.profile-picture {
+    width: 250px; 
+    height: 250px; 
+    border-radius: 50%; /* ছবিটিকে গোল করা হলো */
+    object-fit: cover; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.about-text .name-title {
+    color: #333; 
+    font-size: 2em; 
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.address-block {
+    margin: 20px 0;
+    padding: 15px;
+    border-left: 5px solid #007bff; 
+    background-color: #f0f8ff; 
+}
+
+.address-block h4 {
+    color: #007bff;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.address-block p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+
+/* ছোট পর্দার জন্য পরিবর্তন (Media Query for smaller screens) */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column; 
+        text-align: center;
+    }
+    
+    .profile-picture {
+        margin-bottom: 20px; 
+    }
+    .about-text {
+        padding: 0 10px;
+    }
+}
