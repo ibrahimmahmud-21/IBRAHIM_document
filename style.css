@@ -21,7 +21,6 @@ body {
 
 
 /* নেভিগেশন বারের স্টাইল (Navigation Bar Styles) */
-
 .navbar {
     background-color: #333; 
     padding: 15px 0;
@@ -89,6 +88,8 @@ body {
     border-radius: 50%; /* ছবিটিকে গোল করা হলো */
     object-fit: cover; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    /* নিশ্চিত করার জন্য */
+    flex-shrink: 0;
 }
 
 .about-text .name-title {
@@ -121,12 +122,14 @@ body {
 /* ছোট পর্দার জন্য পরিবর্তন (Media Query for smaller screens) */
 @media (max-width: 768px) {
     .about-container {
-        flex-direction: column; 
+        flex-direction: column; /* ছোট স্ক্রিনে ছবি ও লেখা উপরে-নিচে থাকবে */
         text-align: center;
     }
     
     .profile-picture {
         margin-bottom: 20px; 
+        margin-left: auto;
+        margin-right: auto;
     }
     .about-text {
         padding: 0 10px;
