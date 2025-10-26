@@ -33,16 +33,15 @@
             <ul style="list-style: none; padding: 0;">
                 <li><a href="protected-doc-1.pdf" target="_blank" style="color: #007bff; text-decoration: none;">গুরুত্বপূর্ণ ডকুমেন্ট ১ (PDF)</a></li>
                 <li><a href="protected-doc-2.zip" target="_blank" style="color: #007bff; text-decoration: none;">প্রজেক্ট ফাইলসমূহ (ZIP)</a></li>
-            </ul>
+                </ul>
         </div>
         
     </main>
 
     <script>
         function checkPassword() {
-            // !!! গুরুত্বপূর্ণ: আপনার গোপন পাসওয়ার্ডটি এখানে দিন !!!
-            // আপনি একটি পাসওয়ার্ড ঠিক করে এটিকে পরিবর্তন করুন
-            const CORRECT_PASSWORD = "MySecretCode4760"; 
+            // আপনার সেট করা পাসওয়ার্ড: Ibrahi101movic
+            const CORRECT_PASSWORD = "Ibrahi101movic"; 
             
             const input = document.getElementById("password-input").value;
             const fileLinksDiv = document.getElementById("file-links");
@@ -50,10 +49,12 @@
             const message = document.getElementById("message");
         
             if (input === CORRECT_PASSWORD) {
-                fileLinksDiv.style.display = "block";
-                passwordForm.style.display = "none";
+                // পাসওয়ার্ড সঠিক হলে 
+                fileLinksDiv.style.display = "block"; // লিঙ্কগুলো দেখাবে
+                passwordForm.style.display = "none";  // ফর্মটি লুকিয়ে দেবে
                 message.textContent = ""; 
             } else {
+                // পাসওয়ার্ড ভুল হলে
                 fileLinksDiv.style.display = "none";
                 message.textContent = "পাসওয়ার্ড ভুল হয়েছে, আবার চেষ্টা করুন।";
             }
