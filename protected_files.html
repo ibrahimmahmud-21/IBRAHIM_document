@@ -40,15 +40,16 @@
 
     <script>
         function checkPassword() {
-            // আপনার সেট করা পাসওয়ার্ড: Ibrahi101movic
-            const CORRECT_PASSWORD = "Ibrahi101movic"; 
+            // আপনার পাসওয়ার্ড ছোট হাতের অক্ষরে (Lowercase) সেট করা হয়েছে
+            const CORRECT_PASSWORD_LOWER = "ibrahi101movic"; 
             
-            const input = document.getElementById("password-input").value;
+            // ব্যবহারকারীর ইনপুটকে ছোট হাতের অক্ষরে পরিবর্তন করা হলো
+            const input = document.getElementById("password-input").value.toLowerCase(); 
             const fileLinksDiv = document.getElementById("file-links");
             const passwordForm = document.getElementById("password-form");
             const message = document.getElementById("message");
         
-            if (input === CORRECT_PASSWORD) {
+            if (input === CORRECT_PASSWORD_LOWER) {
                 // পাসওয়ার্ড সঠিক হলে 
                 fileLinksDiv.style.display = "block"; 
                 passwordForm.style.display = "none";  
