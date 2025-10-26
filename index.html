@@ -3,59 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>হোম - ইব্রাহিম মাহমুদ</title>
-    <link rel="stylesheet" href="style.css"> 
+    <title>পাসওয়ার্ড সুরক্ষিত প্রোফাইল পেজ</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            text-align: center;
+        }
+        #protectedContent {
+            /* কন্টেন্টটি প্রাথমিকভাবে লুকিয়ে রাখা হলো */
+            display: none; 
+            border: 2px solid #4CAF50;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 8px;
+            background-color: #f9fff9;
+        }
+        #passwordInput {
+            padding: 10px;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #message {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .profile-img {
+            max-width: 150px;
+            height: auto;
+            border-radius: 50%; /* ছবিটিকে গোলাকার করার জন্য */
+            margin-bottom: 15px;
+        }
+    </style>
 </head>
 <body>
 
-    <nav class="navbar">
-        <div class="container">
-            <a href="index.html" class="logo">IBRAHIM MAHMUD</a>
-            <ul class="nav-links">
-                <li><a href="index.html">হোম (ABOUT ME)</a></li>
-                <li><a href="protected_files.html">সুরক্ষিত ফাইল</a></li>
-            </ul>
-        </div>
-    </nav>
-    <main>
-        <section id="about-me" class="content-section">
-            <h2>ABOUT ME</h2>
-            
-            <div class="about-container">
-                
-                <img src="profile.png" alt="Ibrahim Mahmud Profile Picture" class="profile-picture"> 
-                
-                <div class="about-text">
-                    
-                    <h3 class="name-title">IBRAHIM MAHMUD</h3>
-                    
-                    <div class="address-block">
-                        <h4>Address:</h4>
-                        <p>
-                            Police Station Road, Teknaf.
-                            <br>
-                            Upazila: Teknaf.
-                            <br>
-                            District: Cox's Bazar.
-                            <br>
-                            Division: Chittagong.
-                            <br>
-                            Post Code: 4760. 
-                        </p>
-                    </div>
-                    
-                    <p>
-                        Hello! I am **Ibrahim Mahmud**, and I am a **Student**. I have a great passion for **programming and learning about new technologies**. My aim is to **pursue Computer Science.**
-                    </p>
-                    <p>
-                        On this website, I share my various works, hobbies, and projects. Feel free to contact me if you have any questions or want to collaborate. You can reach me at: 
-                        <a href="mailto:ibmm923@gmail.com">ibmm923@gmail.com</a>
-                    </p>
-                </div>
-            </div>
+    <h1>আমার প্রোফাইল অ্যাক্সেস</h1>
 
-        </section>
-        </main>
+    <input type="password" id="passwordInput" placeholder="পাসওয়ার্ড দিন">
+    <button onclick="checkPassword()">প্রবেশ করুন</button>
     
-</body>
-</html>
+    <p id="message"></p>
+    
+    <div id="protectedContent">
+        <h2>গোপন প্রোফাইল কন্টেন্ট</h2>
+        
+        <img src="profile.jpg" alt="আমার প্রোফাইল ছবি" class="profile-img">
+        
+        <p>অভিনন্দন! আপনি সঠিক পাসওয়ার্ড দিয়ে প্রবেশ করেছেন।</p>
+        <p>এই অংশটিতে আপনি আপনার অন্যান্য গুরুত্বপূর্ণ তথ্য বা লিঙ্ক যোগ করতে পারেন।</p>
+    </div>
+
+    <script>
+        function checkPassword() {
+            // ১. আপনার পছন্দসই সঠিক পাসওয়ার্ড এখানে সেট করুন
+            // **এই "আমারপাসওয়ার্ড" লেখাটি পাল্টে আপনার আসল পাসওয়ার্ডটি দিন**
+            const correctPassword = "আমারপাসওয়ার্ড"; 
+
+            // ২. ইনপ
