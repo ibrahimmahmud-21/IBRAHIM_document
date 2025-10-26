@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>সুরক্ষিত ফাইলসমূহ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">IBRAHIM MAHMUD</a>
+            <ul class="nav-links">
+                <li><a href="index.html">হোম (ABOUT ME)</a></li>
+                <li><a href="protected_files.html">সুরক্ষিত ফাইল</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main class="content-section" style="text-align: center; padding: 50px;">
+        
+        <h2>সুরক্ষিত ফাইলসমূহ</h2>
+        <p>এই ফাইলগুলো দেখতে আপনাকে পাসওয়ার্ড দিয়ে প্রবেশ করতে হবে।</p>
+        
+        <div id="password-form">
+            <label for="password-input">ফাইলগুলো দেখতে পাসওয়ার্ড দিন:</label>
+            <input type="password" id="password-input" placeholder="পাসওয়ার্ড লিখুন">
+            <button onclick="checkPassword()">প্রবেশ করুন</button>
+            <p id="message" style="color: red;"></p>
+        </div>
+        
+        <div id="file-links" style="display: none; margin-top: 20px;">
+            <ul style="list-style: none; padding: 0;">
+                <li><a href="protected-doc-1.pdf" target="_blank" style="color: #007bff; text-decoration: none;">গুরুত্বপূর্ণ ডকুমেন্ট ১ (PDF)</a></li>
+                <li><a href="protected-doc-2.zip" target="_blank" style="color: #007bff; text-decoration: none;">প্রজেক্ট ফাইলসমূহ (ZIP)</a></li>
+                </ul>
+        </div>
+        
+    </main>
+
+    <script>
+        function checkPassword() {
+            // !!! গুরুত্বপূর্ণ: আপনার গোপন পাসওয়ার্ডটি এখানে দিন !!!
+            const CORRECT_PASSWORD = "আমারগোপনপাসওয়ার্ড"; 
+            
+            const input = document.getElementById("password-input").value;
+            const fileLinksDiv = document.getElementById("file-links");
+            const passwordForm = document.getElementById("password-form");
+            const message = document.getElementById("message");
+        
+            if (input === CORRECT_PASSWORD) {
+                fileLinksDiv.style.display = "block";
+                passwordForm.style.display = "none";
+                message.textContent = ""; 
+                // alert("স্বাগতম! আপনি এখন সুরক্ষিত ফাইলগুলো দেখতে পারবেন।"); // চাইলে এই অ্যালার্টটি বাদ দিতে পারেন
+            } else {
+                fileLinksDiv.style.display = "none";
+                message.textContent = "পাসওয়ার্ড ভুল হয়েছে, আবার চেষ্টা করুন।";
+            }
+        }
+    </script>
+    
+</body>
+</html>
